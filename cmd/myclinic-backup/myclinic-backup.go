@@ -27,7 +27,20 @@ const (
 	s3BackupBucketEnvVar     = "MYCLINIC_BACKUP_S3_BUCKET"
 )
 
+func printEnvReference() {
+	fmt.Print(`
+MYCLINIC_DB_USER -- database user
+MYCLINIC_DB_PASS -- database password
+MYCLINIC_BACKUP_DIR -- directory to store plain SQL backup file
+MYCLINIC_BACKUP_ENCRYPTED_DIR -- directory to store encrypted SQL backup file
+MYCLINIC_BACKUP_ENCRYPTION_KEY -- path to encryption key file
+MYCLINIC_BACKUP_S3_REGION -- S3 region
+MYCLINIC_BACKUP_S3_BUCKET -- S3 bucket
+`)
+}
+
 var dryRun = flag.Bool("dry-run", false, "does not actually run commands")
+var printEnv = flag.Bool("env", false, "prints relevant env vars")
 
 func uploadToS3(region string, bucket string, key string, filename string) error {
 	sess := session.Must(session.NewSession(&aws.Config{
@@ -158,6 +171,10 @@ func getEncryptionKey() ([]byte, error) {
 
 func main() {
 	flag.Parse()
+	if *printEnv {
+		printEnvReference()
+		return
+	}
 	now := time.Now()
 	backupDir := getenv(backupDirEnvVar)
 	backupFile := createBackupFilePath(backupDir, now)
