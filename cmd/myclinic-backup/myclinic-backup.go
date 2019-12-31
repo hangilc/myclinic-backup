@@ -137,7 +137,7 @@ func encryptBackupFile(dstPath string, key []byte, srcPath string) error {
 	if err != nil {
 		return err
 	}
-	enc, err := cflib.Encrypt(key, in)
+	enc, err := cflib.CompressAndEncrypt(key, in)
 	err = ioutil.WriteFile(dstPath, enc, 0600)
 	return nil
 }

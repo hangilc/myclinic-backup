@@ -10,6 +10,8 @@ github.com/hangilc/crypt-file v0.0.0-20191230082309-059339d570d2 h1:aT2B0yBokHhv
 github.com/hangilc/crypt-file v0.0.0-20191230082309-059339d570d2/go.mod h1:UZcyNfxO3rRR6/7nFsGwxTeEER5XK/4lfkusQAseSjc=
 github.com/hangilc/crypt-file v0.1.2 h1:gv888Gz2qogr7s1fY1tb/Y2wyMg4eHm+93KyU93BjEE=
 github.com/hangilc/crypt-file v0.1.2/go.mod h1:LutmB5/N8B5+IDPeOy4PTtc2ePePQLCbV7NH/ctTPDw=
+github.com/hangilc/crypt-file v0.2.0 h1:7Xj5xn7vEQ2M9YHNP9qKOuqF7OHn77devV8lJ9V+4RY=
+github.com/hangilc/crypt-file v0.2.0/go.mod h1:LutmB5/N8B5+IDPeOy4PTtc2ePePQLCbV7NH/ctTPDw=
 github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af h1:pmfjZENx5imkbgOkpRUYLnmbU7UEFbjtDA2hxJ1ichM=
 github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
